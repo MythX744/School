@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Adjust the sidebar background color */
+    #sidebar {
+        background-color: #222e3c;
+        color: #fff;
+        height: 100vh;
+        transition: all 0.3s;
+    }
+
+    /* Sidebar Header */
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background-color: #1c2733;
+    }
+
+    /* Sidebar Brand Logo */
+    #sidebar .sidebar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    /* Sidebar Navigation Links */
+    #sidebar .sidebar-nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #sidebar .sidebar-nav a:hover {
+      background-color: #1a2a38;
+    }
+
+    /* Toggle button icon inside the sidebar */
+    .btn-toggle {
+        background-color: #222e3c;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+  </style>
+
+<!-- Sidebar -->
+<nav id="sidebar" class="sidebar js-sidebar overflow-hidden">
+    <div class="sidebar-content js-simplebar">
+        <div class="sidebar-header">
+            <a class="sidebar-brand" href="#">
+                <span class="align-middle">LOGO</span>
+            </a>
+        </div>
+        <ul class="sidebar-nav mt-3">
+
+            <li class="sidebar-header">
+                Pages
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/dashboard">
+                    <i class="fa fa-home" aria-hidden="true" style="color: #ffffff;"></i> <span class="align-middle">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/student">
+                    <i class="fa fa-user" aria-hidden="true" style="color: #ffffff;"></i> <span class="align-middle">&ensp;Student</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/teacher">
+                    <i class="fa fa-users" aria-hidden="true" style="color: #ffffff;"></i> <span class="align-middle">Teacher</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/class">
+                    <i class="fas fa-school" style="color: #ffffff;"></i> <span class="align-middle">Class</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/parent">
+                    <i class="fa fa-user-secret" aria-hidden="true" style="color: #ffffff;"></i> <span class="align-middle">Parent</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/calendar">
+                    <i class="fa fa-calendar-check" aria-hidden="true" style="color: #ffffff;"></i> <span class="align-middle">Calendar</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="/login" onclick="logout()">
+                    <i class="fa fa-sign-out-alt" aria-hidden="true" style="color: #ffffff;"></i> <span class="align-middle">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,69 @@
+{% extends "layout/base.html" %}
+{% block title %} UI Tables {% endblock %}
+
+{% block content %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <main class="content">
+        <div class="row ml-xl-7 text-center">
+        <!-- Add the search bars here -->
+            <form class="row g-2 align-items-center mb-4">
+                <div class="col-auto">
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <label for="search-input-name"><input id="search-input-name" type="search" class="form-control" placeholder="Search by ID"/></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <label for="search-input-class"><input id="search-input-class" type="search" class="form-control" placeholder="Search by Name"/></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button id="search-button" type="button" class="btn btn-primary" style="color: #ffffff; background-color: #222e3c">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- Table -->
+		<div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+                    <div class="card flex-fill">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h3 class="card-header fa" style=" border: transparent; background-color: transparent; color: #222e3c;padding: 10px;margin: 0;">Classes</h3>
+                            <button class="btn btn-primary ml-auto" style="background-color: #222e3c; border-color: #222e3c;">
+                                <i class="fas fa-plus-circle" style="color: white;"></i>
+                            </button>
+                        </div>
+                        <table class="table table-hover my-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">Name</th>
+                                    <th class="d-none d-md-table-cell text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for class in class_data %}
+                                <tr>
+                                    <td class="d-sm-table-cell text-center">{{ class.id }}</td>
+                                    <td class="text-center">{{ class.name }}</td>
+                                    <td class="d-none d-md-table-cell text-center">
+                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i></button>
+                                        <button class="btn btn-transparent"><i class="fas fa-pen"></i></button>
+                                        <button class="btn btn-transparent"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</main>
+{% endblock %}
